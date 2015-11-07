@@ -373,7 +373,7 @@ ENDIF(CRYPTO_LIBRARY)
 #ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
 # try to find open-zwave, if found, include support
-find_library(OpenZWave NAMES libopenzwave.a HINTS "../open-zwave-read-only" "../open-zwave-read-only/cpp/build")
+find_library(OpenZWave NAMES openzwave HINTS "../open-zwave-read-only" "../open-zwave-read-only/cpp/build")
 IF(OpenZWave)
   message(STATUS ${OpenZWave})
   target_link_libraries(domoticz ${OpenZWave})
