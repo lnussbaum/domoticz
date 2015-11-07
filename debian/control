@@ -1,0 +1,16 @@
+Source: domoticz
+Section: electronics
+Priority: extra
+Maintainer: Lucas Nussbaum <lucas@debian.org>
+Build-Depends: debhelper (>= 9), cmake, libboost-dev, libboost-thread-dev, libboost-system-dev, libboost-date-time-dev, libcurl4-openssl-dev
+Standards-Version: 3.9.6
+Homepage: https://www.domoticz.com/
+
+Package: domoticz
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Home automation system
+ Domoticz is a Home Automation System that lets you monitor and configure
+ various devices like: Lights, Switches, various sensors/meters like
+ Temperature, Rain, Wind, UV, Electra, Gas, Water and much more.
+ Notifications/Alerts can be sent to any mobile device.
