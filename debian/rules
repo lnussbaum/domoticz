@@ -19,3 +19,6 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DCMAKE_INSTALL_PREFIX=/usr
+
+update_debian_version:
+	sed -i '1 s/(.*)/($(shell git describe --long --tags --dirty | sed s/-/./g | sed s/^v// ))/' debian/changelog
